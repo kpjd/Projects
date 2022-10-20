@@ -69,7 +69,7 @@ function fetch_img_data($tableName){
 
     try {
 
-        $pdo = new PDO('mysql:host=localhost;dbname=werbung', 'root', '');
+        $pdo = new PDO('mysql:host=localhost;dbname=database', 'user', 'password');
         $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
         $meldung = 'Verbindung zur Datenbank erfolgreich.';
     
@@ -120,7 +120,7 @@ function push_curr_view($imageIndices, $currentView){
     
     try {
     
-        $pdo = new PDO('mysql:host=localhost;dbname=werbung', 'root', '');
+        $pdo = new PDO('mysql:host=localhost;dbname=database', 'user', 'password');
         $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
         $meldung = 'Verbindung zur Datenbank erfolgreich.';
     
