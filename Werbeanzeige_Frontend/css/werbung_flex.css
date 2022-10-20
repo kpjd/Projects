@@ -1,0 +1,115 @@
+/* global configs */
+html, body {
+    height: 100vh;
+    background-color: rgb(230, 255, 222);
+}
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+img{
+    width: 100%;
+    height: auto;
+}
+
+
+/* class configs */
+
+.wrapper {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100vh;
+}
+
+.container{
+    display: flex;
+    flex-wrap: wrap;
+    height: 90vh;
+    background-color: azure;
+}
+
+.bildrahmen {
+    flex: 0 1 50%;
+    height: 45vh;
+    overflow: hidden;
+    border: 3px solid black;
+}
+
+.bildrahmen img {
+    max-width: 90%;
+    height: 75%;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+.bildrahmen h1 {
+    text-align: center;
+}
+
+.bildrahmen p {
+    font-size: 18px;
+}
+
+.bottom {
+    height: 5vh;
+}
+
+.bottom span {
+    font-size: 20px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.banner{
+    height: 5vh;
+    overflow: hidden;
+}
+
+.banner p {
+    
+    font-size: 50px;
+    font-weight: 700;
+    white-space: nowrap;
+
+    /* Starting position */
+       -moz-transform:translateX(100%);
+       -webkit-transform:translateX(100%);  
+       transform:translateX(100%);
+
+ /* Apply animation to this element */  
+       -moz-animation: banner 40s linear infinite;
+       -webkit-animation: banner 40s linear infinite;
+       animation: banner 40s linear infinite;
+}
+
+/* id configs */
+
+
+/* browser configs */
+  
+  /* Move it (define the animation) */
+        @-moz-keyframes banner {
+         0%   { -moz-transform: translateX(100%); }
+         100% { -moz-transform: translateX(-100%); }
+        }
+        @-webkit-keyframes banner {
+         0%   { -webkit-transform: translateX(100%); }
+         100% { -webkit-transform: translateX(-100%); }
+        }
+        @keyframes banner {
+         0%   { 
+         -moz-transform: translateX(100%); /* Firefox bug fix */
+         -webkit-transform: translateX(100%); /* Firefox bug fix */
+         transform: translateX(100%);         
+         }
+         100% { 
+         -moz-transform: translateX(-100%); /* Firefox bug fix */
+         -webkit-transform: translateX(-100%); /* Firefox bug fix */
+         transform: translateX(-100%); 
+         }
+        }
