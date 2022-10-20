@@ -1,2 +1,2 @@
 A collection of Projects.
-Some are almost finished, others not.
+Some are finished, others not.
